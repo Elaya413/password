@@ -22,6 +22,10 @@ app.use((error, req, res, next) => {
   res.status(500).json({ error: error.message });
 });
 
+app.get('/',(req,res)=>{
+  res.send('<h1>RESET PASSWORD</h1>')
+})
+
 app.listen(port, () => {
   console.log("Listening to Port ", port);
 });

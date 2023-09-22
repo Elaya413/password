@@ -3,6 +3,7 @@ let DB_URL = process.env.DB_URL;
 
 module.exports = async function connection() {
   try {
+    mongoose.set('strictQuery', false);
     await mongoose.connect(
       DB_URL,
       {
