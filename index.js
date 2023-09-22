@@ -14,7 +14,7 @@ const port = 8000;
 app.use(cors());
 app.use(express.json());
 
-// API routes
+
 app.use("/api/v1", require("./routes/index.route"));
 
 app.use((error, req, res, next) => {
